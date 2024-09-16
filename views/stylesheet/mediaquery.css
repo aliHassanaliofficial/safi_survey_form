@@ -1,0 +1,37 @@
+
+@media (min-width: 768px) {
+    .logo {
+        width: 20%;
+    }
+
+    .user-picture-area img {
+        width: 30%;
+    }
+}
+
+/*special*/
+
+@media (min-width: 1023px) and (max-width: 1025px) {
+    .logo {
+        width: 10%;
+    }
+
+    .user-picture-area img {
+        width: 190px;
+    height: 190px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .logo {
+        width: 10%;
+    }
+
+    .user-picture-area img {
+        width: 190px;
+        height: 190px;
+    }
+    .form-sector form {
+        width: 50%;
+    }
+}

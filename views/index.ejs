@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAFI Group</title>
+    <link rel="icon" href="./assets/static/framedLogo.png">
+    <link rel="stylesheet" href="./stylesheet/stylesheet.css">
+    <link rel="stylesheet" href="./stylesheet/loader.css">
+    <link rel="stylesheet" href="./stylesheet/mediaquery.css">
+    <!-- fontsMerged_CAIRO -t -googlefonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="loader">
+    <div class="pending">
+        <div class="loading">
+            <img src="./assets/static/framedLogo.png" alt="" />
+            <div id="loaderLine" class="loader-line"></div>
+            <h5 style="margin: 2px 0px">
+                Powered By:
+                <strong style="font-size: 17px">ERA Engines &copy; 2024</strong>
+            </h5>
+            <h5 style="margin: 2px 0px"></h5>
+            <h5 style="margin: 2px 0px">
+                <a href="policies.txt">Rights & Policies</a>
+            </h5>
+        </div>
+    </div>
+</div>
+
+<div class="data" style="background-color: white !important">
+    <div class="main-header" id="mainHeader">
+        <div class="container special-container">
+            <img class="logo special-logo" src="./assets/static/logo_recolored_1.png" alt="">
+            <div class="user-picture-area">
+<!--                <img class="user-picture header-pic"-->
+<!--                     src="./assets/424804879_402094572206511_5659726522148587277_n.jpg" alt="">-->
+                <img class="user-picture header-pic" src="<%= photoPath %>" alt="John's photo">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="page-frame header">
+            <div class="logo-area">
+                <img class="logo" src="./assets/static/logo_recolored_1.png" alt="">
+                <hr style="color: #000;">
+            </div>
+        </div>
+        <div class="form-section">
+            <div class="special-user-credit">
+                <div class="user-picture-area">
+<!--                    <img class="user-picture" src="./assets/424804879_402094572206511_5659726522148587277_n.jpg"-->
+<!--                         alt="">-->
+                    <img class="user-picture header-pic" src="<%= photoPath %>" alt="John's photo">
+
+                </div>
+                <div class="user-name">
+                    <h1>Judy Faddah</h1>
+                </div>
+                <div class="account-username">
+                    <h3>@juju_</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/loader.js"></script>
+<script src="./js/header.js"></script>
+
+<script>
+    const ratingCards = document.querySelectorAll('.rating-card');
+
+    ratingCards.forEach(card => {
+        card.addEventListener('click', () => {
+            ratingCards.forEach(card => card.classList.remove('active'));
+            card.classList.add('active');
+        });
+    });
+</script>
+
+<script>
+    var a = document.getElementById("exc");
+    var b = document.getElementById("excInput");
+
+    a.addEventListener("click", function () {
+        b.value = '70%'
+        console.log(b.value);
+    })
+</script>
+</body>
+
+</html>
