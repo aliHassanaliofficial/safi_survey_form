@@ -1,10 +1,9 @@
 const express = require('express');
-const app = express();
 const path = require('path');
 const fs = require('fs');
 const csv = require('csv-parser');
 
-
+const app = express();
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'views')));
@@ -14,7 +13,7 @@ app.get('/:reqPath', (req, res) => {
     const csvFilePath = path.join(__dirname, 'public', 'users', `${reqPath}`, 'user_data.csv');
     let userName = 'User Not Found';
     let igUserNm = 'username not attached';
-    
+
     fs.access(csvFilePath, fs.constants.F_OK, (err) => {
         if (err) {
             console.error(`File ${csvFilePath} not found or inaccessible:`, err);
@@ -45,6 +44,8 @@ app.get('/:reqPath', (req, res) => {
     }
 });
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
-});
+// app.listen(3000, () => {
+//     console.log('Server is running on port 3000');
+// });
+
+module.exports = app;
